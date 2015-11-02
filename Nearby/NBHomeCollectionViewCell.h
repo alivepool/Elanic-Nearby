@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NBHomeCollectionViewCell.h
 //  Nearby
 //
 //  Created by Ameya on 02/11/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NBHomeCollectionViewCell : UICollectionViewCell
 
 @end
-
