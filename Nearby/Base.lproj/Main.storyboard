@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Nearby-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NBHomeViewController" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                             <constraint firstItem="OY4-Ld-cfW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gZK-sF-cAa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="t92-E1-9PF"/>
+                    <navigationItem key="navigationItem" title="Nearby" id="t92-E1-9PF"/>
                     <connections>
                         <outlet property="categoryCollectionView" destination="OY4-Ld-cfW" id="Wsd-F6-vZq"/>
                     </connections>
