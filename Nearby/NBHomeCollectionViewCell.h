@@ -10,5 +10,5 @@
 #import "NBUIConstants.h"
 
 @interface NBHomeCollectionViewCell : UICollectionViewCell
-
+@property (nonatomic, strong)IBOutlet UILabel *categoryLabel;
 @end

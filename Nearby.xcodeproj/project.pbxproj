@@ -25,6 +25,10 @@
 		745881F51BE88A8A0062FCC2 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881EA1BE88A8A0062FCC2 /* AFURLRequestSerialization.m */; settings = {ASSET_TAGS = (); }; };
 		745881F61BE88A8A0062FCC2 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881EC1BE88A8A0062FCC2 /* AFURLResponseSerialization.m */; settings = {ASSET_TAGS = (); }; };
 		745881F71BE88A8A0062FCC2 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881EE1BE88A8A0062FCC2 /* AFURLSessionManager.m */; settings = {ASSET_TAGS = (); }; };
+		745881FB1BE920FE0062FCC2 /* NBPlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881FA1BE920FE0062FCC2 /* NBPlacesTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		745881FE1BE9308D0062FCC2 /* NBPlacesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881FD1BE9308D0062FCC2 /* NBPlacesTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		745882061BE942090062FCC2 /* NBPlacesRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 745882051BE942090062FCC2 /* NBPlacesRequestManager.m */; settings = {ASSET_TAGS = (); }; };
+		745882091BE9422E0062FCC2 /* NBPlacesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 745882081BE9422E0062FCC2 /* NBPlacesModel.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,14 @@
 		745881ED1BE88A8A0062FCC2 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		745881EE1BE88A8A0062FCC2 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		745881F81BE895ED0062FCC2 /* NBUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBUIConstants.h; sourceTree = "<group>"; };
+		745881F91BE920FE0062FCC2 /* NBPlacesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPlacesTableViewController.h; sourceTree = "<group>"; };
+		745881FA1BE920FE0062FCC2 /* NBPlacesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPlacesTableViewController.m; sourceTree = "<group>"; };
+		745881FC1BE9308D0062FCC2 /* NBPlacesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPlacesTableViewCell.h; sourceTree = "<group>"; };
+		745881FD1BE9308D0062FCC2 /* NBPlacesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPlacesTableViewCell.m; sourceTree = "<group>"; };
+		745882041BE942090062FCC2 /* NBPlacesRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPlacesRequestManager.h; sourceTree = "<group>"; };
+		745882051BE942090062FCC2 /* NBPlacesRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPlacesRequestManager.m; sourceTree = "<group>"; };
+		745882071BE9422E0062FCC2 /* NBPlacesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPlacesModel.h; sourceTree = "<group>"; };
+		745882081BE9422E0062FCC2 /* NBPlacesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPlacesModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,18 +145,11 @@
 		745881A41BE747680062FCC2 /* Nearby */ = {
 			isa = PBXGroup;
 			children = (
-				745881A81BE747680062FCC2 /* AppDelegate.h */,
-				745881A91BE747680062FCC2 /* AppDelegate.m */,
-				745881AB1BE747680062FCC2 /* NBHomeViewController.h */,
-				745881AC1BE747680062FCC2 /* NBHomeViewController.m */,
+				745881FF1BE93F750062FCC2 /* Misc */,
 				745881AE1BE747680062FCC2 /* Main.storyboard */,
-				745881D81BE76C590062FCC2 /* NBHomeCollectionViewCell.h */,
-				745881D91BE76C590062FCC2 /* NBHomeCollectionViewCell.m */,
-				745881F81BE895ED0062FCC2 /* NBUIConstants.h */,
+				745882001BE93F850062FCC2 /* NBHome */,
+				745882011BE93FA80062FCC2 /* NBPlaces */,
 				745881DB1BE88A8A0062FCC2 /* AFNetworking */,
-				745881B11BE747690062FCC2 /* Assets.xcassets */,
-				745881B31BE747690062FCC2 /* LaunchScreen.storyboard */,
-				745881B61BE747690062FCC2 /* Info.plist */,
 				745881A51BE747680062FCC2 /* Supporting Files */,
 			);
 			path = Nearby;
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				745881A61BE747680062FCC2 /* main.m */,
+				745881F81BE895ED0062FCC2 /* NBUIConstants.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,6 +206,60 @@
 				745881EE1BE88A8A0062FCC2 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		745881FF1BE93F750062FCC2 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				745881B11BE747690062FCC2 /* Assets.xcassets */,
+				745881B31BE747690062FCC2 /* LaunchScreen.storyboard */,
+				745881B61BE747690062FCC2 /* Info.plist */,
+				745881A81BE747680062FCC2 /* AppDelegate.h */,
+				745881A91BE747680062FCC2 /* AppDelegate.m */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		745882001BE93F850062FCC2 /* NBHome */ = {
+			isa = PBXGroup;
+			children = (
+				745881AB1BE747680062FCC2 /* NBHomeViewController.h */,
+				745881AC1BE747680062FCC2 /* NBHomeViewController.m */,
+				745881D81BE76C590062FCC2 /* NBHomeCollectionViewCell.h */,
+				745881D91BE76C590062FCC2 /* NBHomeCollectionViewCell.m */,
+			);
+			name = NBHome;
+			sourceTree = "<group>";
+		};
+		745882011BE93FA80062FCC2 /* NBPlaces */ = {
+			isa = PBXGroup;
+			children = (
+				745881F91BE920FE0062FCC2 /* NBPlacesTableViewController.h */,
+				745881FA1BE920FE0062FCC2 /* NBPlacesTableViewController.m */,
+				745881FC1BE9308D0062FCC2 /* NBPlacesTableViewCell.h */,
+				745881FD1BE9308D0062FCC2 /* NBPlacesTableViewCell.m */,
+				745882021BE9413A0062FCC2 /* NBPlacesAPI */,
+				745882031BE941AA0062FCC2 /* NBPlacesModel */,
+			);
+			name = NBPlaces;
+			sourceTree = "<group>";
+		};
+		745882021BE9413A0062FCC2 /* NBPlacesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				745882041BE942090062FCC2 /* NBPlacesRequestManager.h */,
+				745882051BE942090062FCC2 /* NBPlacesRequestManager.m */,
+			);
+			name = NBPlacesAPI;
+			sourceTree = "<group>";
+		};
+		745882031BE941AA0062FCC2 /* NBPlacesModel */ = {
+			isa = PBXGroup;
+			children = (
+				745882071BE9422E0062FCC2 /* NBPlacesModel.h */,
+				745882081BE9422E0062FCC2 /* NBPlacesModel.m */,
+			);
+			name = NBPlacesModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,17 +394,21 @@
 			files = (
 				745881AD1BE747680062FCC2 /* NBHomeViewController.m in Sources */,
 				745881F31BE88A8A0062FCC2 /* AFSecurityPolicy.m in Sources */,
+				745881FE1BE9308D0062FCC2 /* NBPlacesTableViewCell.m in Sources */,
 				745881DA1BE76C590062FCC2 /* NBHomeCollectionViewCell.m in Sources */,
 				745881F01BE88A8A0062FCC2 /* AFHTTPRequestOperationManager.m in Sources */,
 				745881F41BE88A8A0062FCC2 /* AFURLConnectionOperation.m in Sources */,
 				745881EF1BE88A8A0062FCC2 /* AFHTTPRequestOperation.m in Sources */,
 				745881AA1BE747680062FCC2 /* AppDelegate.m in Sources */,
 				745881F51BE88A8A0062FCC2 /* AFURLRequestSerialization.m in Sources */,
+				745881FB1BE920FE0062FCC2 /* NBPlacesTableViewController.m in Sources */,
 				745881F11BE88A8A0062FCC2 /* AFHTTPSessionManager.m in Sources */,
 				745881F21BE88A8A0062FCC2 /* AFNetworkReachabilityManager.m in Sources */,
 				745881F61BE88A8A0062FCC2 /* AFURLResponseSerialization.m in Sources */,
+				745882091BE9422E0062FCC2 /* NBPlacesModel.m in Sources */,
 				745881F71BE88A8A0062FCC2 /* AFURLSessionManager.m in Sources */,
 				745881A71BE747680062FCC2 /* main.m in Sources */,
+				745882061BE942090062FCC2 /* NBPlacesRequestManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nearby/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EL.Nearby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -495,6 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nearby/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EL.Nearby;
 				PRODUCT_NAME = "$(TARGET_NAME)";

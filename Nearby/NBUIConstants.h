@@ -17,3 +17,12 @@
 #define NBHOME_CELL_PADDING 10
 #define NBHOME_CELL_SPACING 10
 #define NBHOME_CELL_HEIGHT  180
+
+
+#pragma mark -- NBHomeCollectionViewCell UI constants
+
+#define NBHOME_CELL_REUSE_IDENTIFIER @"homeCellIdentifier"
+
+#pragma mark -- NBPlacesTableViewCell UI constants
+
+#define NBPLACES_CELL_REUSE_IDENTIFIER @"placesCellIdentifier"
