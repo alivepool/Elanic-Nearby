@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NBUIConstants.h"
 
 @interface NBHomeCollectionViewCell : UICollectionViewCell
 
