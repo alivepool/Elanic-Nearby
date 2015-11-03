@@ -53,8 +53,8 @@
 		745881A61BE747680062FCC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		745881A81BE747680062FCC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		745881A91BE747680062FCC2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		745881AB1BE747680062FCC2 /* NBHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBHomeViewController.h; sourceTree = "<group>"; };
-		745881AC1BE747680062FCC2 /* NBHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBHomeViewController.m; sourceTree = "<group>"; };
+		745881AB1BE747680062FCC2 /* NBHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NBHomeViewController.h; path = NBHome/NBHomeViewController.h; sourceTree = "<group>"; };
+		745881AC1BE747680062FCC2 /* NBHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NBHomeViewController.m; path = NBHome/NBHomeViewController.m; sourceTree = "<group>"; };
 		745881AF1BE747680062FCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		745881B11BE747690062FCC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		745881B41BE747690062FCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,8 +65,8 @@
 		745881C61BE747690062FCC2 /* NearbyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearbyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		745881CA1BE747690062FCC2 /* NearbyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearbyUITests.m; sourceTree = "<group>"; };
 		745881CC1BE747690062FCC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		745881D81BE76C590062FCC2 /* NBHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBHomeCollectionViewCell.h; sourceTree = "<group>"; };
-		745881D91BE76C590062FCC2 /* NBHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBHomeCollectionViewCell.m; sourceTree = "<group>"; };
+		745881D81BE76C590062FCC2 /* NBHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBHomeCollectionViewCell.h; path = NBHome/NBHomeCollectionViewCell.h; sourceTree = "<group>"; };
+		745881D91BE76C590062FCC2 /* NBHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBHomeCollectionViewCell.m; path = NBHome/NBHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		745881DC1BE88A8A0062FCC2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		745881DD1BE88A8A0062FCC2 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		745881DE1BE88A8A0062FCC2 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -87,14 +87,14 @@
 		745881ED1BE88A8A0062FCC2 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		745881EE1BE88A8A0062FCC2 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		745881F81BE895ED0062FCC2 /* NBUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBUIConstants.h; sourceTree = "<group>"; };
-		745881F91BE920FE0062FCC2 /* NBPlacesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPlacesTableViewController.h; sourceTree = "<group>"; };
-		745881FA1BE920FE0062FCC2 /* NBPlacesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPlacesTableViewController.m; sourceTree = "<group>"; };
-		745881FC1BE9308D0062FCC2 /* NBPlacesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPlacesTableViewCell.h; sourceTree = "<group>"; };
-		745881FD1BE9308D0062FCC2 /* NBPlacesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPlacesTableViewCell.m; sourceTree = "<group>"; };
-		745882041BE942090062FCC2 /* NBPlacesRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPlacesRequestManager.h; sourceTree = "<group>"; };
-		745882051BE942090062FCC2 /* NBPlacesRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPlacesRequestManager.m; sourceTree = "<group>"; };
-		745882071BE9422E0062FCC2 /* NBPlacesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBPlacesModel.h; sourceTree = "<group>"; };
-		745882081BE9422E0062FCC2 /* NBPlacesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBPlacesModel.m; sourceTree = "<group>"; };
+		745881F91BE920FE0062FCC2 /* NBPlacesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBPlacesTableViewController.h; path = NBPlaces/NBPlacesTableViewController.h; sourceTree = "<group>"; };
+		745881FA1BE920FE0062FCC2 /* NBPlacesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBPlacesTableViewController.m; path = NBPlaces/NBPlacesTableViewController.m; sourceTree = "<group>"; };
+		745881FC1BE9308D0062FCC2 /* NBPlacesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBPlacesTableViewCell.h; path = NBPlaces/NBPlacesTableViewCell.h; sourceTree = "<group>"; };
+		745881FD1BE9308D0062FCC2 /* NBPlacesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBPlacesTableViewCell.m; path = NBPlaces/NBPlacesTableViewCell.m; sourceTree = "<group>"; };
+		745882041BE942090062FCC2 /* NBPlacesRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBPlacesRequestManager.h; path = NBPlaces/NBPlacesAPI/NBPlacesRequestManager.h; sourceTree = "<group>"; };
+		745882051BE942090062FCC2 /* NBPlacesRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBPlacesRequestManager.m; path = NBPlaces/NBPlacesAPI/NBPlacesRequestManager.m; sourceTree = "<group>"; };
+		745882071BE9422E0062FCC2 /* NBPlacesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBPlacesModel.h; path = NBPlaces/NBPlacesModel/NBPlacesModel.h; sourceTree = "<group>"; };
+		745882081BE9422E0062FCC2 /* NBPlacesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBPlacesModel.m; path = NBPlaces/NBPlacesModel/NBPlacesModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -634,6 +634,7 @@
 				745881D11BE747690062FCC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		745881D21BE747690062FCC2 /* Build configuration list for PBXNativeTarget "NearbyTests" */ = {
 			isa = XCConfigurationList;
@@ -642,6 +643,7 @@
 				745881D41BE747690062FCC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		745881D51BE747690062FCC2 /* Build configuration list for PBXNativeTarget "NearbyUITests" */ = {
 			isa = XCConfigurationList;
@@ -650,6 +652,7 @@
 				745881D71BE747690062FCC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
