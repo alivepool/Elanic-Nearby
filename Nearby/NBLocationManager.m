@@ -26,6 +26,9 @@
             if ([globalInstance.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
                 [globalInstance.locationManager requestAlwaysAuthorization];
             }
+            if ([globalInstance.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+                [globalInstance.locationManager requestWhenInUseAuthorization];
+            }
             globalInstance.locationManager.pausesLocationUpdatesAutomatically = NO;
             globalInstance.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
             globalInstance.locationManager.distanceFilter = kCLDistanceFilterNone;

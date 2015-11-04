@@ -7,8 +7,14 @@
 //
 
 #import "NBPlacesTableViewCell.h"
+#import "UIImageView+ImageCache.h"
 
 @implementation NBPlacesTableViewCell
+
+-(void)setImageWithURL:(NSString*)urlString{
+    [self.imageView setImageWithURL:urlString];
+}
+
 - (UIEdgeInsets)layoutMargins {
     return UIEdgeInsetsZero;
 }
