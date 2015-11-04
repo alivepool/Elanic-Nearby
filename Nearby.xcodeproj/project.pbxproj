@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7404ECF71BEA6F340018E426 /* NBPlacesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7404ECF61BEA6F340018E426 /* NBPlacesDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7404ECF91BEA76A80018E426 /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7404ECF81BEA76A80018E426 /* Placeholder.png */; settings = {ASSET_TAGS = (); }; };
+		7404ECFB1BEA804D0018E426 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7404ECFA1BEA804D0018E426 /* CoreData.framework */; };
+		7404ECFF1BEA81300018E426 /* NBLocationManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7404ECFD1BEA81300018E426 /* NBLocationManager.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		745881A71BE747680062FCC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881A61BE747680062FCC2 /* main.m */; };
 		745881AA1BE747680062FCC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881A91BE747680062FCC2 /* AppDelegate.m */; };
 		745881AD1BE747680062FCC2 /* NBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881AC1BE747680062FCC2 /* NBHomeViewController.m */; };
@@ -58,6 +60,8 @@
 		7404ECF51BEA6F340018E426 /* NBPlacesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBPlacesDetailViewController.h; path = NBPlaces/NBPlacesDetailViewController.h; sourceTree = "<group>"; };
 		7404ECF61BEA6F340018E426 /* NBPlacesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBPlacesDetailViewController.m; path = NBPlaces/NBPlacesDetailViewController.m; sourceTree = "<group>"; };
 		7404ECF81BEA76A80018E426 /* Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Placeholder.png; sourceTree = "<group>"; };
+		7404ECFA1BEA804D0018E426 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7404ECFE1BEA81300018E426 /* NBLocationManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NBLocationManager.xcdatamodel; sourceTree = "<group>"; };
 		745881A21BE747680062FCC2 /* Nearby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nearby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		745881A61BE747680062FCC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		745881A81BE747680062FCC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7404ECFB1BEA804D0018E426 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,10 +143,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7404ECFC1BEA805B0018E426 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7404ECFA1BEA804D0018E426 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7404ED001BEA813E0018E426 /* NBDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				7404ECFD1BEA81300018E426 /* NBLocationManager.xcdatamodeld */,
+			);
+			name = NBDataManager;
+			sourceTree = "<group>";
+		};
 		745881991BE747670062FCC2 = {
 			isa = PBXGroup;
 			children = (
 				745881A41BE747680062FCC2 /* Nearby */,
+				7404ECFC1BEA805B0018E426 /* Frameworks */,
 				745881BE1BE747690062FCC2 /* NearbyTests */,
 				745881C91BE747690062FCC2 /* NearbyUITests */,
 				745881A31BE747680062FCC2 /* Products */,
@@ -264,6 +286,7 @@
 				7404ECF61BEA6F340018E426 /* NBPlacesDetailViewController.m */,
 				745882021BE9413A0062FCC2 /* NBPlacesAPI */,
 				745882031BE941AA0062FCC2 /* NBPlacesModel */,
+				7404ED001BEA813E0018E426 /* NBDataManager */,
 			);
 			name = NBPlaces;
 			sourceTree = "<group>";
@@ -436,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7404ECFF1BEA81300018E426 /* NBLocationManager.xcdatamodeld in Sources */,
 				745881AD1BE747680062FCC2 /* NBHomeViewController.m in Sources */,
 				745881F31BE88A8A0062FCC2 /* AFSecurityPolicy.m in Sources */,
 				745881FE1BE9308D0062FCC2 /* NBPlacesTableViewCell.m in Sources */,
@@ -705,6 +729,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7404ECFD1BEA81300018E426 /* NBLocationManager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7404ECFE1BEA81300018E426 /* NBLocationManager.xcdatamodel */,
+			);
+			currentVersion = 7404ECFE1BEA81300018E426 /* NBLocationManager.xcdatamodel */;
+			name = NBLocationManager.xcdatamodeld;
+			path = NBPlaces/NBDataManager/NBLocationManager.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7458819A1BE747670062FCC2 /* Project object */;
 }

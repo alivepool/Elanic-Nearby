@@ -143,7 +143,7 @@
                                     <constraint firstAttribute="width" constant="120" id="rOL-ri-45d"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-64-eFO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-64-eFO">
                                 <rect key="frame" x="165" y="221" width="271" height="83"/>
                                 <animations/>
                                 <constraints>
@@ -178,7 +178,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijp-UE-xR8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijp-UE-xR8">
                                 <rect key="frame" x="165" y="324" width="271" height="87"/>
                                 <animations/>
                                 <constraints>
@@ -257,7 +257,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Place" id="fcX-GV-nGL"/>
+                    <navigationItem key="navigationItem" title="Place" id="fcX-GV-nGL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QgC-sw-oDj"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="placeArea" destination="ijp-UE-xR8" id="42U-Fr-dJx"/>
                         <outlet property="placeImageView" destination="S28-Gd-njo" id="WC4-aF-zyy"/>
