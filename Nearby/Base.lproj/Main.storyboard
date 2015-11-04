@@ -100,6 +100,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="2Sy-bi-X8A" kind="show" id="VfN-iK-LAC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -118,6 +121,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6EO-ee-ldN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1812" y="250"/>
+        </scene>
+        <!--Place-->
+        <scene sceneID="d8x-vT-5iY">
+            <objects>
+                <viewController id="2Sy-bi-X8A" customClass="NBPlacesDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Ee-Kl-yQY"/>
+                        <viewControllerLayoutGuide type="bottom" id="t8O-YL-Pof"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5lf-mb-nnh">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Place" id="fcX-GV-nGL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pe-3s-0JD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473" y="250"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gPl-bJ-a2x">

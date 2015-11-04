@@ -12,9 +12,13 @@
 #import "NBStateMachine.h"
 #import "NBLocationManager.h"
 #import "NBPlacesRequestManager.h"
+#import "NBPlacesDetailViewController.h"
 
 #define GOOGLE_PLACES_KEY @"AIzaSyABrrDMyypdLi8C18EMTK2gU1Tt88g9fjA"
 #define GOOGLE_PLACES_PATH @"maps/api/place/nearbysearch/json"
+
+#define RADIUS_DEFAULT @"5000"
+#define RADIUS_KEY @"radius"
 
 @interface NBPlacesTableViewController() <UITableViewDataSource,
                                           UITableViewDelegate>
@@ -52,10 +56,10 @@
         [self.tableView setLayoutMargins:UIEdgeInsetsZero];
     }
     
-    self.radius = [[NSUserDefaults standardUserDefaults] objectForKey:@"radius"];
+    self.radius = [[NSUserDefaults standardUserDefaults] objectForKey:RADIUS_KEY];
     if (!self.radius) {
-        self.radius = @"5000";
-        [[NSUserDefaults standardUserDefaults] setObject:@"5000" forKey:@"radius"];
+        self.radius = RADIUS_DEFAULT;
+        [[NSUserDefaults standardUserDefaults] setObject:RADIUS_DEFAULT forKey:RADIUS_KEY];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     [self fetchData];
@@ -63,6 +67,10 @@
 
 -(void)fetchData
 {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.refreshControl beginRefreshing];
+    });
     NBPlacesRequestManager *requestManager = [[NBPlacesRequestManager alloc] initWithBaseUrlString:nil];
     
     NSString *latLongStr = [NSString stringWithFormat:@"%f,%f",[NBLocationManager instance].lastLocation.coordinate.latitude, [NBLocationManager instance].lastLocation.coordinate.longitude];
@@ -78,6 +86,11 @@
         });
     } failure:^(NSError * _Nullable error) {
         //Handle error case
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.placesDataArray = nil;
+            [self.refreshControl endRefreshing];
+            [self.tableView reloadData];
+        });
     }];
 }
 
@@ -100,6 +113,10 @@
     
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
+}
+
 #pragma mark ---- Tableview view data source methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -112,15 +129,15 @@
     if (!cell) {
         cell = [[NBPlacesTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NBPLACES_CELL_REUSE_IDENTIFIER];
     }
-    
-    NBPlacesModel *selectedModel = [self.placesDataArray objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = selectedModel.name;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.nbModel = [self.placesDataArray objectAtIndex:indexPath.row];
     return cell;
 }
 
 
 
+#pragma mark **--
+#pragma mark ---- AlertView methods, delegates/callbacks
 - (IBAction)showOptionPopover:(id)sender {
     self.actionAlertView = [[UIAlertView alloc]initWithTitle:@"Enter search radius" message:Nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Search", nil];
     self.actionAlertView.alertViewStyle = UIAlertViewStylePlainTextInput;
@@ -133,7 +150,7 @@
         
         if ([self.actionAlertView textFieldAtIndex:0].text) {
             self.radius = [self.actionAlertView textFieldAtIndex:0].text;
-            [[NSUserDefaults standardUserDefaults] setObject:[self.actionAlertView textFieldAtIndex:0].text forKey:@"radius"];
+            [[NSUserDefaults standardUserDefaults] setObject:[self.actionAlertView textFieldAtIndex:0].text forKey:RADIUS_KEY];
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
         [self fetchData];
@@ -143,6 +160,17 @@
     }
 }
 
+
+#pragma mark **--
+#pragma mark ---- Navigation methods
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    NBPlacesDetailViewController *destViewController = segue.destinationViewController;
+    destViewController.nbModel = [self.placesDataArray objectAtIndex:indexPath.row];
+    destViewController.title = destViewController.nbModel.name;
+}
 
 
 

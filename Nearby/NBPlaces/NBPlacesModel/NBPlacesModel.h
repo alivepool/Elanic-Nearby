@@ -19,6 +19,8 @@
 @property (nonatomic, strong)NSString   *scope;
 @property (nonatomic, strong)NSArray    *types;
 @property (nonatomic, strong)NSString   *vicinity;
+@property (nonatomic, strong)NSString   *imageURL;
+@property (nonatomic, strong)NSString   *baseImageURL;
 
 -(instancetype)initWithDictionary:(NSDictionary*)dict;
 @end

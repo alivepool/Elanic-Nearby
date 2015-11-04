@@ -34,6 +34,9 @@
     requestedImage = [[UIImageView sharedCache] objectForKey:urlString];
     if(requestedImage)
     {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.image = requestedImage;
+        });
         return requestedImage;
     }
     else{

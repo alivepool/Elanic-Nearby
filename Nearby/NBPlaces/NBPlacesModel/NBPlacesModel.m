@@ -8,6 +8,8 @@
 
 #import "NBPlacesModel.h"
 
+#define GOOGLE_PLACES_KEY @"AIzaSyABrrDMyypdLi8C18EMTK2gU1Tt88g9fjA"
+
 @implementation NBPlacesModel
 
 -(instancetype)initWithDictionary:(NSDictionary*)dict
@@ -23,6 +25,9 @@
         self.scope = [dict valueForKey:@"scope"];
         self.types = [dict valueForKey:@"types"];
         self.vicinity = [dict valueForKey:@"vicinity"];
+        self.baseImageURL = @"https://maps.googleapis.com/maps/api/place/photo?";
+        
+        self.imageURL = [NSString stringWithFormat:@"%@maxwidth=600&photoreference=%@&key=%@",self.baseImageURL,self.reference,GOOGLE_PLACES_KEY];
         
     }
     return self;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7404ECF71BEA6F340018E426 /* NBPlacesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7404ECF61BEA6F340018E426 /* NBPlacesDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7404ECF91BEA76A80018E426 /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7404ECF81BEA76A80018E426 /* Placeholder.png */; settings = {ASSET_TAGS = (); }; };
 		745881A71BE747680062FCC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881A61BE747680062FCC2 /* main.m */; };
 		745881AA1BE747680062FCC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881A91BE747680062FCC2 /* AppDelegate.m */; };
 		745881AD1BE747680062FCC2 /* NBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881AC1BE747680062FCC2 /* NBHomeViewController.m */; };
@@ -53,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7404ECF51BEA6F340018E426 /* NBPlacesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBPlacesDetailViewController.h; path = NBPlaces/NBPlacesDetailViewController.h; sourceTree = "<group>"; };
+		7404ECF61BEA6F340018E426 /* NBPlacesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBPlacesDetailViewController.m; path = NBPlaces/NBPlacesDetailViewController.m; sourceTree = "<group>"; };
+		7404ECF81BEA76A80018E426 /* Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Placeholder.png; sourceTree = "<group>"; };
 		745881A21BE747680062FCC2 /* Nearby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nearby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		745881A61BE747680062FCC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		745881A81BE747680062FCC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -255,6 +260,8 @@
 				745881FA1BE920FE0062FCC2 /* NBPlacesTableViewController.m */,
 				745881FC1BE9308D0062FCC2 /* NBPlacesTableViewCell.h */,
 				745881FD1BE9308D0062FCC2 /* NBPlacesTableViewCell.m */,
+				7404ECF51BEA6F340018E426 /* NBPlacesDetailViewController.h */,
+				7404ECF61BEA6F340018E426 /* NBPlacesDetailViewController.m */,
 				745882021BE9413A0062FCC2 /* NBPlacesAPI */,
 				745882031BE941AA0062FCC2 /* NBPlacesModel */,
 			);
@@ -282,6 +289,7 @@
 		745882101BE9F6200062FCC2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				7404ECF81BEA76A80018E426 /* Placeholder.png */,
 				745882111BE9F6200062FCC2 /* Default-568h@2x.png */,
 			);
 			path = Assets;
@@ -399,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7404ECF91BEA76A80018E426 /* Placeholder.png in Resources */,
 				745881B51BE747690062FCC2 /* LaunchScreen.storyboard in Resources */,
 				745882121BE9F6200062FCC2 /* Default-568h@2x.png in Resources */,
 				745881B21BE747690062FCC2 /* Assets.xcassets in Resources */,
@@ -444,6 +453,7 @@
 				7458820F1BE9DC380062FCC2 /* NBLocationManager.m in Sources */,
 				745882091BE9422E0062FCC2 /* NBPlacesModel.m in Sources */,
 				745881F71BE88A8A0062FCC2 /* AFURLSessionManager.m in Sources */,
+				7404ECF71BEA6F340018E426 /* NBPlacesDetailViewController.m in Sources */,
 				745881A71BE747680062FCC2 /* main.m in Sources */,
 				745882061BE942090062FCC2 /* NBPlacesRequestManager.m in Sources */,
 				7458820C1BE946AF0062FCC2 /* NBStateMachine.m in Sources */,
