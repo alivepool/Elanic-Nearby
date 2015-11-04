@@ -29,6 +29,9 @@
 		745881FE1BE9308D0062FCC2 /* NBPlacesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881FD1BE9308D0062FCC2 /* NBPlacesTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		745882061BE942090062FCC2 /* NBPlacesRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 745882051BE942090062FCC2 /* NBPlacesRequestManager.m */; settings = {ASSET_TAGS = (); }; };
 		745882091BE9422E0062FCC2 /* NBPlacesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 745882081BE9422E0062FCC2 /* NBPlacesModel.m */; settings = {ASSET_TAGS = (); }; };
+		7458820C1BE946AF0062FCC2 /* NBStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458820B1BE946AF0062FCC2 /* NBStateMachine.m */; settings = {ASSET_TAGS = (); }; };
+		7458820F1BE9DC380062FCC2 /* NBLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458820E1BE9DC380062FCC2 /* NBLocationManager.m */; settings = {ASSET_TAGS = (); }; };
+		745882121BE9F6200062FCC2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 745882111BE9F6200062FCC2 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,11 @@
 		745882051BE942090062FCC2 /* NBPlacesRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBPlacesRequestManager.m; path = NBPlaces/NBPlacesAPI/NBPlacesRequestManager.m; sourceTree = "<group>"; };
 		745882071BE9422E0062FCC2 /* NBPlacesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBPlacesModel.h; path = NBPlaces/NBPlacesModel/NBPlacesModel.h; sourceTree = "<group>"; };
 		745882081BE9422E0062FCC2 /* NBPlacesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBPlacesModel.m; path = NBPlaces/NBPlacesModel/NBPlacesModel.m; sourceTree = "<group>"; };
+		7458820A1BE946AF0062FCC2 /* NBStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBStateMachine.h; path = NBStateMachine/NBStateMachine.h; sourceTree = "<group>"; };
+		7458820B1BE946AF0062FCC2 /* NBStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBStateMachine.m; path = NBStateMachine/NBStateMachine.m; sourceTree = "<group>"; };
+		7458820D1BE9DC380062FCC2 /* NBLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBLocationManager.h; sourceTree = "<group>"; };
+		7458820E1BE9DC380062FCC2 /* NBLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBLocationManager.m; sourceTree = "<group>"; };
+		745882111BE9F6200062FCC2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,11 +219,16 @@
 		745881FF1BE93F750062FCC2 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				745882101BE9F6200062FCC2 /* Assets */,
 				745881B11BE747690062FCC2 /* Assets.xcassets */,
 				745881B31BE747690062FCC2 /* LaunchScreen.storyboard */,
 				745881B61BE747690062FCC2 /* Info.plist */,
 				745881A81BE747680062FCC2 /* AppDelegate.h */,
 				745881A91BE747680062FCC2 /* AppDelegate.m */,
+				7458820A1BE946AF0062FCC2 /* NBStateMachine.h */,
+				7458820B1BE946AF0062FCC2 /* NBStateMachine.m */,
+				7458820D1BE9DC380062FCC2 /* NBLocationManager.h */,
+				7458820E1BE9DC380062FCC2 /* NBLocationManager.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -260,6 +273,14 @@
 				745882081BE9422E0062FCC2 /* NBPlacesModel.m */,
 			);
 			name = NBPlacesModel;
+			sourceTree = "<group>";
+		};
+		745882101BE9F6200062FCC2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				745882111BE9F6200062FCC2 /* Default-568h@2x.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				745881B51BE747690062FCC2 /* LaunchScreen.storyboard in Resources */,
+				745882121BE9F6200062FCC2 /* Default-568h@2x.png in Resources */,
 				745881B21BE747690062FCC2 /* Assets.xcassets in Resources */,
 				745881B01BE747680062FCC2 /* Main.storyboard in Resources */,
 			);
@@ -405,10 +427,12 @@
 				745881F11BE88A8A0062FCC2 /* AFHTTPSessionManager.m in Sources */,
 				745881F21BE88A8A0062FCC2 /* AFNetworkReachabilityManager.m in Sources */,
 				745881F61BE88A8A0062FCC2 /* AFURLResponseSerialization.m in Sources */,
+				7458820F1BE9DC380062FCC2 /* NBLocationManager.m in Sources */,
 				745882091BE9422E0062FCC2 /* NBPlacesModel.m in Sources */,
 				745881F71BE88A8A0062FCC2 /* AFURLSessionManager.m in Sources */,
 				745881A71BE747680062FCC2 /* main.m in Sources */,
 				745882061BE942090062FCC2 /* NBPlacesRequestManager.m in Sources */,
+				7458820C1BE946AF0062FCC2 /* NBStateMachine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = Nearby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -559,6 +584,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = Nearby/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

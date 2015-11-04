@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NBPlacesModel.h"
 
 @interface NBPlacesRequestManager : NSObject
 
+-(instancetype _Nullable)initWithBaseUrlString:(NSString* _Nullable)url;
+-(void)getPlaces:(NSString* _Nullable)path
+      parameters:(NSDictionary* _Nullable)paramDict
+         Success:(nullable void (^)(id  _Nullable response))success
+         failure:(nullable void (^)(NSError  * _Nullable error))failure;
 @end

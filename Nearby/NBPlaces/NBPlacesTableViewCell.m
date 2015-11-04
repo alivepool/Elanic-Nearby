@@ -9,5 +9,7 @@
 #import "NBPlacesTableViewCell.h"
 
 @implementation NBPlacesTableViewCell
-
+- (UIEdgeInsets)layoutMargins {
+    return UIEdgeInsetsZero;
+}
 @end

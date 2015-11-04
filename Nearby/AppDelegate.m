@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NBLocationManager.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //initializing location manager on launch
+    [NBLocationManager instance];
     return YES;
 }
 

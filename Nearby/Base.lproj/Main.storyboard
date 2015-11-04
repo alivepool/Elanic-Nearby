@@ -14,12 +14,13 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OY4-Ld-cfW">
                                 <rect key="frame" x="20" y="72" width="560" height="520"/>
                                 <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IAE-a1-rdx">
                                     <size key="itemSize" width="144" height="142"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -28,7 +29,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeCellIdentifier" id="cFQ-iH-VF6" customClass="NBHomeCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="64" width="144" height="142"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="142"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="144" height="142"/>
@@ -52,7 +53,7 @@
                                         <color key="backgroundColor" red="0.89411764709999997" green="0.1960784314" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="categoryLabel" destination="3wu-uY-Hyq" id="pji-Fc-z5z"/>
-                                            <segue destination="raN-cY-f3L" kind="show" id="nN4-cW-6d6"/>
+                                            <segue destination="raN-cY-f3L" kind="show" id="MfS-1j-F3s"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -80,18 +81,18 @@
             </objects>
             <point key="canvasLocation" x="984" y="328.5"/>
         </scene>
-        <!--Places Table View Controller-->
+        <!--Places-->
         <scene sceneID="5og-dG-c56">
             <objects>
                 <tableViewController id="raN-cY-f3L" customClass="NBPlacesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wqb-t7-cBo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JF3-da-PcE">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="placesCellIdentifier" id="JF3-da-PcE">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JF3-da-PcE" id="XSb-Ml-Klu">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -106,17 +107,25 @@
                             <outlet property="delegate" destination="raN-cY-f3L" id="n8e-rW-JxJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Places" id="DQo-Sr-dhy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="cue-bj-SCx">
+                            <connections>
+                                <action selector="showOptionPopover:" destination="raN-cY-f3L" id="nOj-Ug-3qR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6EO-ee-ldN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1670" y="546"/>
+            <point key="canvasLocation" x="1812" y="250"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gPl-bJ-a2x">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bFa-8r-Wbr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Olq-H4-nXv">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Olq-H4-nXv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>

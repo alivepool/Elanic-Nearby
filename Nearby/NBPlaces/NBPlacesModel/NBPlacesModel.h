@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface NBPlacesModel : NSObject
+@property (nonatomic, strong)CLLocation *placeLocation;
+@property (nonatomic, strong)NSString   *icon;
+@property (nonatomic, strong)NSString   *identifier;
+@property (nonatomic, strong)NSString   *name;
+@property (nonatomic, strong)NSString   *placeId;
+@property (nonatomic, strong)NSString   *reference;
+@property (nonatomic, strong)NSString   *scope;
+@property (nonatomic, strong)NSArray    *types;
+@property (nonatomic, strong)NSString   *vicinity;
 
+-(instancetype)initWithDictionary:(NSDictionary*)dict;
 @end

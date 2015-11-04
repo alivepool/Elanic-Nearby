@@ -8,9 +8,11 @@
 
 #ifndef NBUIConstants_h
 #define NBUIConstants_h
-
-
 #endif /* NBUIConstants_h */
+
+#ifndef IS_IPHONE
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#endif
 
 #pragma mark -- NBHomeViewController UI constants
 

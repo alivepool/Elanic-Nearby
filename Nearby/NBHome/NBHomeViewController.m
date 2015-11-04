@@ -9,6 +9,9 @@
 #import "NBHomeViewController.h"
 #import "NBHomeCollectionViewCell.h"
 #import "NBUIConstants.h"
+#import "NBStateMachine.h"
+#import "NBPlacesTableViewController.h"
+#import "NBLocationManager.h"
 
 @interface NBHomeViewController ()<UICollectionViewDataSource,
                                    UICollectionViewDelegate,
@@ -17,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *categoryCollectionView;
 @property (assign, nonatomic) CGSize transitionSize;
 @property (strong, nonatomic) NSArray *categoryArray;
+@property (strong, nonatomic) UILabel *latLongLabel;
 
 @end
 
@@ -32,6 +36,9 @@
     
     //TODO:Remove hardcoding and replace with dynamic logic : bootstrap
     self.categoryArray = @[@"food", @"gym", @"school", @"hospital", @"spa", @"restaurant"];
+    self.latLongLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 100, 60, 30)];
+    self.latLongLabel.textColor = [UIColor blackColor];
+    [self.view addSubview:self.latLongLabel];
 }
 
 #pragma mark **--
@@ -70,7 +77,7 @@
 #pragma mark -- UICollectionViewDelegate methods
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
 }
 
 
@@ -103,6 +110,10 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
+    NSIndexPath *indexPath = [self.categoryCollectionView indexPathForCell:sender];
+    NBPlacesTableViewController *destViewController = segue.destinationViewController;
+    destViewController.selectedCategory = [self.categoryArray objectAtIndex:indexPath.row];
+    destViewController.title = [destViewController.selectedCategory capitalizedString];
     
 }
 
