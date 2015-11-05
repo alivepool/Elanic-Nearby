@@ -11,6 +11,8 @@
 		7404ECF91BEA76A80018E426 /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7404ECF81BEA76A80018E426 /* Placeholder.png */; settings = {ASSET_TAGS = (); }; };
 		7404ECFB1BEA804D0018E426 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7404ECFA1BEA804D0018E426 /* CoreData.framework */; };
 		7404ECFF1BEA81300018E426 /* NBLocationManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7404ECFD1BEA81300018E426 /* NBLocationManager.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		7404ED031BEB3A040018E426 /* NBMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7404ED021BEB3A040018E426 /* NBMapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7404ED061BEB3CED0018E426 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7404ED051BEB3CED0018E426 /* MapKit.framework */; };
 		745881A71BE747680062FCC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881A61BE747680062FCC2 /* main.m */; };
 		745881AA1BE747680062FCC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881A91BE747680062FCC2 /* AppDelegate.m */; };
 		745881AD1BE747680062FCC2 /* NBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745881AC1BE747680062FCC2 /* NBHomeViewController.m */; };
@@ -62,6 +64,9 @@
 		7404ECF81BEA76A80018E426 /* Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Placeholder.png; sourceTree = "<group>"; };
 		7404ECFA1BEA804D0018E426 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7404ECFE1BEA81300018E426 /* NBLocationManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NBLocationManager.xcdatamodel; sourceTree = "<group>"; };
+		7404ED011BEB3A040018E426 /* NBMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBMapViewController.h; path = NBMap/NBMapViewController.h; sourceTree = "<group>"; };
+		7404ED021BEB3A040018E426 /* NBMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBMapViewController.m; path = NBMap/NBMapViewController.m; sourceTree = "<group>"; };
+		7404ED051BEB3CED0018E426 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		745881A21BE747680062FCC2 /* Nearby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nearby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		745881A61BE747680062FCC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		745881A81BE747680062FCC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7404ED061BEB3CED0018E426 /* MapKit.framework in Frameworks */,
 				7404ECFB1BEA804D0018E426 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +152,7 @@
 		7404ECFC1BEA805B0018E426 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7404ED051BEB3CED0018E426 /* MapKit.framework */,
 				7404ECFA1BEA804D0018E426 /* CoreData.framework */,
 			);
 			name = Frameworks;
@@ -157,6 +164,15 @@
 				7404ECFD1BEA81300018E426 /* NBLocationManager.xcdatamodeld */,
 			);
 			name = NBDataManager;
+			sourceTree = "<group>";
+		};
+		7404ED041BEB3A110018E426 /* NBMap */ = {
+			isa = PBXGroup;
+			children = (
+				7404ED011BEB3A040018E426 /* NBMapViewController.h */,
+				7404ED021BEB3A040018E426 /* NBMapViewController.m */,
+			);
+			name = NBMap;
 			sourceTree = "<group>";
 		};
 		745881991BE747670062FCC2 = {
@@ -187,6 +203,7 @@
 				745881AE1BE747680062FCC2 /* Main.storyboard */,
 				745882001BE93F850062FCC2 /* NBHome */,
 				745882011BE93FA80062FCC2 /* NBPlaces */,
+				7404ED041BEB3A110018E426 /* NBMap */,
 				747404A01BEA391C00BA97D4 /* Utilities */,
 				745881DB1BE88A8A0062FCC2 /* AFNetworking */,
 				745881A51BE747680062FCC2 /* Supporting Files */,
@@ -471,6 +488,7 @@
 				745881AA1BE747680062FCC2 /* AppDelegate.m in Sources */,
 				745881F51BE88A8A0062FCC2 /* AFURLRequestSerialization.m in Sources */,
 				745881FB1BE920FE0062FCC2 /* NBPlacesTableViewController.m in Sources */,
+				7404ED031BEB3A040018E426 /* NBMapViewController.m in Sources */,
 				745881F11BE88A8A0062FCC2 /* AFHTTPSessionManager.m in Sources */,
 				745881F21BE88A8A0062FCC2 /* AFNetworkReachabilityManager.m in Sources */,
 				745881F61BE88A8A0062FCC2 /* AFURLResponseSerialization.m in Sources */,

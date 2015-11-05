@@ -8,12 +8,14 @@
 
 #import "NBPlacesDetailViewController.h"
 #import "UIImageView+ImageCache.h"
+#import "NBMapViewController.h"
 
 @interface NBPlacesDetailViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *placeImageView;
 @property (strong, nonatomic) IBOutlet UILabel *placeName;
 @property (strong, nonatomic) IBOutlet UILabel *placeArea;
 
+- (IBAction)showPlaceOnMap:(id)sender;
 @end
 
 @implementation NBPlacesDetailViewController
@@ -26,5 +28,15 @@
     self.placeArea.text = self.nbModel.vicinity;
     self.placeName.text = self.nbModel.name;
     
+}
+- (IBAction)showPlaceOnMap:(id)sender {
+    
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    NBMapViewController *destViewController = segue.destinationViewController;
+    destViewController.nbModel = self.nbModel;
 }
 @end
