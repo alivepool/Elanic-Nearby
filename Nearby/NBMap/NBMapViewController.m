@@ -39,6 +39,7 @@
     [annotation setCoordinate:self.nbModel.placeLocation.coordinate];
     [annotation setTitle:self.nbModel.name]; //You can set the subtitle too
     [self.mapView addAnnotation:annotation];
+    [self.mapView selectAnnotation:annotation animated:YES];
 }
 
 /*
